@@ -3,7 +3,7 @@ from .models import Student
 from .serializers import StudentSerializer
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly
-from .permissions import IsAdminorReadOnly
+from .permissions import IsAdminorReadOnly, IsAddedByUserOrReadOnly
 
 
 
@@ -17,7 +17,8 @@ class StudentList(generics.ListCreateAPIView):
     # permission_classes=[IsAuthenticated]
     # permission_classes=[IsAdminUser]
     # permission_classes=[IsAuthenticatedOrReadOnly]
-    permission_classes=[IsAdminorReadOnly]
+    # permission_classes=[IsAdminorReadOnly]
+    permission_classes=[IsAddedByUserOrReadOnly]
 
 
        
