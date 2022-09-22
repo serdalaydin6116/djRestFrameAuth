@@ -4,6 +4,7 @@ class Student(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     number = models.IntegerField(blank=True, null=True)
+    user=
 
 
     def __str__(self):
