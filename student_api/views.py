@@ -15,7 +15,7 @@ class StudentList(generics.ListCreateAPIView):
     queryset = Student.objects.all()
     # permission_classes=[IsAuthenticated]
     # permission_classes=[IsAdminUser]
-    permission_classes=[IsAuthenticatedOrReadOnly]
+    # permission_classes=[IsAuthenticatedOrReadOnly]
 
 
        
